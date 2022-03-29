@@ -53,7 +53,7 @@
         function getRuns(config, resource) {
           if (!resource.run_number) return;
           // Fetch recent runs from API
-          fetch(`/flows/${resource.flow_id}/runs?_order=-ts_epoch&_limit=6`)
+          fetch(`/metaflow-ui-backend/flows/${resource.flow_id}/runs?_order=-ts_epoch&_limit=6`)
             .then((response) => response.json())
             .then((response) => {
               const newRows = [];
@@ -65,7 +65,7 @@
                 el.classList = ['run'];
                 // Create link element with run number
                 let linkEl = document.createElement('a');
-                linkEl.href = `/flows/${resource.flow_id}/runs/${item.run_id}`;
+                linkEl.href = `/metaflow-ui-backend/flows/${resource.flow_id}/runs/${item.run_id}`;
                 linkEl.target = '_parent';
                 linkEl.textContent = item.run_id;
                 // Show duration for run
