@@ -65,9 +65,9 @@
                 el.classList = ['run'];
                 // Create link element with run number
                 let linkEl = document.createElement('a');
-                linkEl.href = `/${resource.flow_id}/${item.run_id}`;
+                linkEl.href = `/flows/${resource.flow_id}/runs/${item.run_id}`;
                 linkEl.target = '_parent';
-                linkEl.textContent = item.run_number;
+                linkEl.textContent = item.run_id;
                 // Show duration for run
                 let durationEl = document.createElement('div');
                 durationEl.textContent = `Duration: ${item.duration / 1000}s`;
