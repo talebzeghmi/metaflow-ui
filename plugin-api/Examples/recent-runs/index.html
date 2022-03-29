@@ -53,7 +53,7 @@
         function getRuns(config, resource) {
           if (!resource.run_number) return;
           // Fetch recent runs from API
-          fetch(`/api/flows/${resource.flow_id}/runs?_order=-ts_epoch&_limit=6`)
+          fetch(`/flows/${resource.flow_id}/runs?_order=-ts_epoch&_limit=6`)
             .then((response) => response.json())
             .then((response) => {
               const newRows = [];
