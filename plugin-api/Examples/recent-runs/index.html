@@ -71,7 +71,7 @@
                 linkEl.textContent = item.run_id;
                 // Show duration for run
                 let durationEl = document.createElement('div');
-                durationEl.textContent = `Duration: ${item.duration / 1000}s`;
+                durationEl.textContent = `${item.status}: ${item.duration / 1000}s`;
 
                 el.appendChild(linkEl);
                 el.appendChild(durationEl);
