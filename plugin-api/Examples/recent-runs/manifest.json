@@ -2,5 +2,6 @@
   "name": "Recent runs",
   "version": "0.0.1",
   "entrypoint": "index.html",
-  "slot": "run-header"
+  "slot": "run-header",
+  "container": "titled-container"
 }
